@@ -6,8 +6,8 @@ import React from 'react';
 
 const ScreenRow = (props) => {
   return (
-    <div className="screen-row">
-      <input type="text" readOnly value={props.value}/>
+    <div className="row">
+      <input className={`${props.className} col-xs-12`} type="text" readOnly value={props.value} />
     </div>
   )
 }
@@ -16,7 +16,8 @@ const ScreenRow = (props) => {
 // into this component
 
 ScreenRow.propTypes = {
-  value: React.PropTypes.string.isRequired
+  value: React.PropTypes.string.isRequired,
+  className: React.PropTypes.string
 }
 
 export default ScreenRow;
